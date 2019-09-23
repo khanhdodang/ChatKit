@@ -17,6 +17,7 @@ public class MainActivityPagerAdapter extends FragmentStatePagerAdapter {
     public static final int ID_CUSTOM_LAYOUT = 2;
     public static final int ID_CUSTOM_VIEW_HOLDER = 3;
     public static final int ID_CUSTOM_CONTENT = 4;
+    public static final int ID_ITA = 5;
 
     private Context context;
 
@@ -50,12 +51,16 @@ public class MainActivityPagerAdapter extends FragmentStatePagerAdapter {
                 title = context.getString(R.string.sample_title_custom_content);
                 description = context.getString(R.string.sample_subtitle_custom_content);
                 break;
+            case ID_ITA:
+                title = context.getString(R.string.sample_title_ita);
+                description = context.getString(R.string.sample_subtitle_ita);
+                break;
         }
         return DemoCardFragment.newInstance(position, title, description);
     }
 
     @Override
     public int getCount() {
-        return 5;
+        return 6;
     }
 }

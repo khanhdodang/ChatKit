@@ -1,6 +1,8 @@
 package com.stfalcon.chatkit.sample.features.main.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -56,7 +58,12 @@ public class DemoCardFragment extends Fragment
 
         TextView tvTitle = (TextView) v.findViewById(R.id.tvTitle);
         TextView tvDescription = (TextView) v.findViewById(R.id.tvDescription);
-        Button button = (Button) v.findViewById(R.id.button);
+        Button button = (Button) v.findViewById(R.id.button_view);
+        System.out.println("Build.VERSION.SDK_INT: " + Build.VERSION.SDK_INT);
+        if (Build.VERSION.SDK_INT == 23 || Build.VERSION.SDK_INT == 24) {
+            button.setText("See More");
+            button.setBackgroundColor(Color.DKGRAY);
+        }
 
         tvTitle.setText(title);
         tvDescription.setText(description);
@@ -68,7 +75,7 @@ public class DemoCardFragment extends Fragment
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.button:
+            case R.id.button_view:
                 onAction();
                 break;
         }

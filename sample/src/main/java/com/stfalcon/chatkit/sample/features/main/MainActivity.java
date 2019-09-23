@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity
             case MainActivityPagerAdapter.ID_CUSTOM_CONTENT:
                 CustomMediaMessagesActivity.open(this);
                 break;
+            case MainActivityPagerAdapter.ID_ITA:
+                CustomMediaMessagesActivity.open(this);
+                break;
         }
     }
 }
