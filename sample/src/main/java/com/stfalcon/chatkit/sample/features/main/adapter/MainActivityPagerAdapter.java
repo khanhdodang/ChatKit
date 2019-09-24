@@ -12,12 +12,12 @@ import com.stfalcon.chatkit.sample.R;
  */
 public class MainActivityPagerAdapter extends FragmentStatePagerAdapter {
 
-    public static final int ID_DEFAULT = 0;
+    public static final int ID_DEFAULT = 5;
     public static final int ID_STYLED = 1;
     public static final int ID_CUSTOM_LAYOUT = 2;
     public static final int ID_CUSTOM_VIEW_HOLDER = 3;
     public static final int ID_CUSTOM_CONTENT = 4;
-    public static final int ID_ITA = 5;
+    public static final int ID_ITA = 0;
 
     private Context context;
 
